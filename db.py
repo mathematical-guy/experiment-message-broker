@@ -46,7 +46,7 @@ class Task(Model):
         try:
             task = cls.get(id=id)
         except Exception as e:
-            print(f"Task with ID {id} is not available")
+            print(f"Task with ID {id} is not available, got error {str(e)}")
             return None
 
         task.is_completed = True
